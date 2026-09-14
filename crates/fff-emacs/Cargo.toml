@@ -1,0 +1,18 @@
+[package]
+name = "fff-emacs"
+version = "0.1.0"
+edition = "2021"
+description = "Emacs dynamic module wrapping fff-search"
+license = "GPL-3.0-or-later"
+
+[lib]
+crate-type = ["cdylib"]
+name = "fff_core"
+
+[dependencies]
+anyhow = "1"
+emacs = "0.21"
+fff-search = { version = "=0.10.6" }
+fff-query-parser = { version = "=0.10.6" }
+parking_lot = "0.12"
+once_cell = "1.20"
